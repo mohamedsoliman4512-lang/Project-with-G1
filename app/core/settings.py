@@ -18,8 +18,8 @@ class Settings(BaseSettings):
     db_name: str = "northwind"
     db_user: str = "postgres"
     db_password: str = "postgres"
-
-
+    openrouter_api_key: str = ""
+    openrouter_model: str = "openai/gpt-oss-20b:free"
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
